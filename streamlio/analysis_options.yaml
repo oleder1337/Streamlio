@@ -1,0 +1,17 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  enable-experiment:
+    - non-nullable
+
+linter:
+  rules:
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    - always_specify_types
+    - avoid_print
+    - prefer_final_fields
+    - prefer_final_locals
+    - avoid_init_to_null
+    - public_member_api_docs
+    - prefer_interpolation_to_compose_strings
