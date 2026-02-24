@@ -4,8 +4,12 @@ class EnvironmentService {
   static String? _tmdbApiKey;
 
   static Future<void> init() async {
-    await dotenv.load();
-    _tmdbApiKey = dotenv.env['TMDB_API_KEY'];
+    try {
+      await dotenv.load();
+      _tmdbApiKey = dotenv.env['TMDB_API_KEY'];
+    } catch (e) {
+      print('Error loading .env file: $e');
+    }
   }
 
   static String? getTmdbApiKey() {
